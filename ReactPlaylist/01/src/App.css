@@ -1,7 +1,5 @@
 p {
   color: yellow;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-align: center;
   text-indent: 20px;
 }
@@ -9,6 +7,8 @@ p {
 body {
   background-color: #282c34;
   /* text-shadow:10px red; */
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 h1 {

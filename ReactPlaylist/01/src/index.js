@@ -4,13 +4,43 @@ import './App.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// function Ello() {
+//   return <h1>Hello World</h1>
+// }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <App></App>
-);
+// function Compo(params) {
+//   const name = "shekhar";
+//   const x = 2 + 3;
+//   return <h1>Hello {name}</h1>
+// }
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// const user = {
+//   FirstName: "Shekhar",
+//   LastName: "Dase"
+// }
+// function Add({ user }) {
+//   return <h1>{user.FirstName + ' ' + user.LastName}</h1>
+// }
+
+function Add(a, b) {
+  return a + b
+}
+
+function Comp() {
+  return <h2>Hello {Add(20, 20)}</h2>
+}
+
+function Card() {
+  return (
+    <div>
+      <div className="card">This is Card Demo</div>
+      <h2>Card Title</h2>
+      <p>This is a card component.</p>
+    </div>
+
+  )
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+// root.render(<Add />)
+root.render(<Card />)
