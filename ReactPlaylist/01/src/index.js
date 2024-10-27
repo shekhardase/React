@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './App.css';
+// import './App.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -20,27 +20,33 @@ import reportWebVitals from './reportWebVitals';
 // }
 // function Add({ user }) {
 //   return <h1>{user.FirstName + ' ' + user.LastName}</h1>
+// // }
+
+// function Add(a, b) {
+//   return a + b
 // }
 
-function Add(a, b) {
-  return a + b
-}
+// function Comp() {
+//   return <h2>Hello {Add(20, 20)}</h2>
+// }
 
-function Comp() {
-  return <h2>Hello {Add(20, 20)}</h2>
-}
+// function Card() {
+//   return (
+//     <div>
+//       <div className="card">This is Card Demo</div>
+//       <h2>Card Title</h2>
+//       <p>This is a card component.</p>
+//     </div>
 
-function Card() {
-  return (
-    <div>
-      <div className="card">This is Card Demo</div>
-      <h2>Card Title</h2>
-      <p>This is a card component.</p>
-    </div>
+//   )
+// }
+// zz
 
-  )
-}
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 // root.render(<Add />)
-root.render(<Card />)
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+)
