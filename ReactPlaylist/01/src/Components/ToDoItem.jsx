@@ -1,11 +1,12 @@
 import React from "react";
 
-const TODOIteam = () => {
+const TODOItem = (prop) => {
     return (
         <li className="ToDo-Item">
             <span>
-                <input type="checkbox" />
-                <span className="Item-text">Eat</span>
+                {prop.completed ? <></> : <input type="checkbox" />}
+
+                <span className="Item-text" >{prop.text}</span>
             </span>
             <p>...</p>
         </li>
@@ -14,4 +15,4 @@ const TODOIteam = () => {
 
 }
 
-export default TODOIteam
+export default TODOItem
