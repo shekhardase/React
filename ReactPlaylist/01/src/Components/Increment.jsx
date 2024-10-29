@@ -2,28 +2,22 @@ import React, { useState } from "react";
 
 const Counter = () => {
     const [count, setCount] = useState(0);       // Initial count, will be set by user
-    const [initialCount, setInitialCount] = useState(''); // To store user's initial input
-
-    // Function to update count when user clicks 'Set Initial Count'
-    const setInitialCountValue = () => {
-        const parsedCount = parseInt(initialCount, 10);
-        if (!isNaN(parsedCount)) {
-            setCount(parsedCount); // Set count only if the input is a number
-        }
-    };
+    const [value, setValue] = useState('Shekhar');
+    const [state, setState] = useState("Zero");
 
     return (
         <div>
-            <h2>Set Initial Count</h2>
-            <input
-                type="number"
-                value={initialCount}
-                onChange={(e) => setInitialCount(e.target.value)}
-                placeholder="Enter initial count"
-            />
-            <button onClick={setInitialCountValue}>Set Initial Count</button>
 
             <h2>Counter: {count}</h2>
+
+
+
+            <h5>Value is : {value}</h5>
+            <button onClick={() => {
+                setValue("React");
+            }}>
+                Change
+            </button>
 
             <button className="ButtonToDo" onClick={() => setCount(count + 1)}>
                 Increment
@@ -36,7 +30,22 @@ const Counter = () => {
             <button className="ButtonToDo" onClick={() => setCount(0)}>
                 Reset
             </button>
-        </div>
+
+            <button onClick={() => {
+                if (count % 2 == 0) {
+                    setState("Even")
+                }
+                else {
+                    setState("Odd")
+                }
+            }}>
+                Check
+            </button>
+            <h4 >The number is {state} (this change is made with button)</h4>
+            <h2> Number is {count % 2 === 0 ? " Even" : "Odd"} (This is inLine change)</h2>
+
+            {/* <h2>NUmber is {(count@)}</h2> */}
+        </div >
     );
 };
 
