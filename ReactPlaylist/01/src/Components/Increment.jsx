@@ -43,8 +43,7 @@ const Counter = () => {
             </button>
             <h4 >The number is {state} (this change is made with button)</h4>
             <h2> Number is {count % 2 === 0 ? " Even" : "Odd"} (This is inLine change)</h2>
-
-            {/* <h2>NUmber is {(count@)}</h2> */}
+            
         </div >
     );
 };
