@@ -10,7 +10,7 @@ import Increment from './Components/Increment';
 function App() {
   return (
     <div className='ToDoContainer'>
-      {/* <Increment /> */}
+      <Increment />
 
 
       <Header text="HuiHui" />
