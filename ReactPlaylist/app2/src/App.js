@@ -1,23 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+import GetRandomUser from './api';
+import UserCard from './Component/usercard';
 
 function App() {
+
+  const [userData, setuserData] = useState(null);
+
+
+  // useEffect(() => {
+  //   GetRandomUser().then(user => setuserData(user.results[0])
+  //   )
+  // }, [])
+
+  useEffect(() => {
+    userRefresh();  // Trigger initial data load
+  }, []);
+
+
+  const userRefresh = () => {
+    GetRandomUser().then(user => setuserData(user.results[0]))
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      {userData && <UserCard data={userData} />}
+      <button onClick={userRefresh}>Click</button>
+
+      {/* <button onClick={() => window.location.reload()}>Click</button>       // or i can use another function */}
     </div>
   );
 }
