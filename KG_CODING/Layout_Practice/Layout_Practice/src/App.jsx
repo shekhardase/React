@@ -7,7 +7,7 @@ import FooterOne from "./Components/FooterOne";
 import SecondPage from "./Components/SecondPage";
 import ThirdPage from "./Components/ThirdPage";
 import LastPage from "./Components/LastPage";
-
+import Text from "./Animations/Text";
 function App() {
   return <div>
     <Heading />
@@ -16,6 +16,7 @@ function App() {
     <SecondPage />
     <ThirdPage />
     <LastPage />
+    {/* <Text/> */}
   </div>;
 }
 

@@ -28,10 +28,11 @@
 
 /* Title Section */
 .title {
-  margin: 0 auto;
+  /* margin left: :; */
+  margin-left: 12%;
   font-size: xx-large;
   font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
-  text-align: center;
+  /* text-align: center; */
 }
 
 /* Navigation Section */
@@ -64,7 +65,7 @@
 /* Background Fade-In Effect */
 body {
   background-color: rgb(242, 235, 225);
-  font-family: 'Open Sans', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -75,9 +76,10 @@ body {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  margin-top: 100px;
+  margin-top: 10px;
   animation: slideInFromBottom 1s ease-in-out;
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family:'Courier New', Courier, monospace;
 }
 
 .hero h1 {
