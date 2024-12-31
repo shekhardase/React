@@ -1,13 +1,18 @@
 import React from "react";
-export default function App() {
+import Heading from "./Components/Heading";
+import FirstHero from "./Components/FirstHero";
+import QuickLinks from "./Components/QuickLinks";
+// impor QuickLinks
+
+function App() {
   return (
+    <div>
 
-    <div className="flex items-center w-full h-full justify-center">
-      <h1 className=" text-5xl font-thin  text-red-950 mt-8">
-        Hello world!
-      </h1>
+      <Heading />
+      <FirstHero />
+      <QuickLinks />
     </div>
-
-
   )
 }
+
+export default App;
