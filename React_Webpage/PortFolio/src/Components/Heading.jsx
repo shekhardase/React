@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import "../index.css";
 import gsap from "gsap";
+
+
 // import Cursor from "./Components/Cursor";
 const Heading = () => {
     // Hover animation - upside down effect
@@ -50,12 +52,12 @@ const Heading = () => {
 
             <div
                 ref={navbarRef}
-                className="navbar w-full flex items-center font-nunito font-bold text-black text-xl bg-slate-300 border-b-4 border-black"
+                className="navbar w-full flex items-center font-nunito font-bold text-black text-sm sm:text-xl bg-slate-300 border-b-4 border-black px-4 sm:px-12 "
             >
                 {/* Logo */}
                 <a
                     href="/"
-                    className="flex items-center justify-center w-20 h-16"
+                    className="flex items-center justify-center w-20 h-16 sm:w-12 sm:h-10"
                     onMouseOver={hoverAnimation}
                     onMouseOut={hoverOutAnimation}
                 >
