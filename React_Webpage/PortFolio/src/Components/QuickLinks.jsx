@@ -44,7 +44,7 @@ function QuickLinks() {
 
     return (
         <div
-            className="quicklinks mt-10 w-auto flex flex-col items-center font-nunito font-bold text-black text-xl"
+            className="quicklinks mt-10 w-auto flex flex-col items-center font-nunito font-extrabold text-black text-xl"
         >
             <h1 className="mb-5 text-3xl">Quick Links</h1>
 

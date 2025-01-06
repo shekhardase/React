@@ -7,92 +7,75 @@ const Card = () => {
 
     useEffect(() => {
         const box = boxRef.current;
-        const but = buttonRef.current;
+        const button = buttonRef.current;
 
         // Initial gradient
         gsap.set(box, {
             backgroundImage: "linear-gradient(to bottom right, rgba(100,116,139,1), rgba(100,116,139,0.01))",
         });
 
-        // Apply hover animation
+        // Hover animations
         const hoverIn = () => {
             gsap.to(box, {
-                backgroundImage: "linear-gradient(to bottom right, rgba(100,116,139,0.01), rgba(100,116,139,1))", // Slate gradient
+                backgroundImage: "linear-gradient(to bottom right, rgba(100,116,139,0.01), rgba(100,116,139,1))",
                 duration: 0.5,
                 ease: "power2.inOut",
-                color: "black",
-                scale: 1.1,
+                scale: 1.05,
             });
-
-            gsap.to(but, {
-                backgroundImage: "linear-gradient(to right, rgba(100,116,139,1), rgba(148,163,184,1))", // Button gradient on hover
+            gsap.to(button, {
+                backgroundImage: "linear-gradient(to right, rgba(100,116,139,1), rgba(148,163,184,1))",
                 duration: 0.3,
                 ease: "power2.inOut",
-                color: "white",
                 scale: 1.05,
             });
         };
 
         const hoverOut = () => {
             gsap.to(box, {
-                backgroundImage: "linear-gradient(to bottom right, rgba(100,116,139,1), rgba(100,116,139,0.01))", // Reverse gradient
+                backgroundImage: "linear-gradient(to bottom right, rgba(100,116,139,1), rgba(100,116,139,0.01))",
                 duration: 0.5,
                 ease: "power2.inOut",
-                color: "black",
                 scale: 1,
             });
-
-            gsap.to(but, {
-                backgroundImage: "linear-gradient(to right, rgba(148,163,184,1), rgba(100,116,139,1))", // Reverse gradient for button
+            gsap.to(button, {
+                backgroundImage: "linear-gradient(to right, rgba(148,163,184,1), rgba(100,116,139,1))",
                 duration: 0.3,
                 ease: "power2.inOut",
-                color: "white",
                 scale: 1,
             });
         };
 
         box.addEventListener("mouseenter", hoverIn);
         box.addEventListener("mouseleave", hoverOut);
-        but.addEventListener("mouseenter", hoverIn);
-        but.addEventListener("mouseleave", hoverOut);
 
-        // Cleanup listeners
         return () => {
             box.removeEventListener("mouseenter", hoverIn);
             box.removeEventListener("mouseleave", hoverOut);
-            but.removeEventListener("mouseenter", hoverIn);
-            but.removeEventListener("mouseleave", hoverOut);
         };
     }, []);
 
     return (
         <div
             ref={boxRef}
-            className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-2xl"
+            className="w-full max-w-sm bg-white rounded-lg shadow-lg transform transition-transform duration-300"
         >
-            <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-slate-500 bg-clip-border text-white shadow-lg shadow-slate-500/40 bg-gradient-to-r from-slate-500 to-slate-600">
-            </div>
+            <div className="h-40 bg-slate-500 rounded-t-lg"></div>
             <div className="p-6">
-                <h5 className="mb-2 block font-sans text-xl font-bold leading-snug tracking-normal text-slate-900 antialiased">
-                    Tailwind card
-                </h5>
-                <p className="block font-sans text-base font-semibold leading-relaxed text-inherit antialiased ">
+                <h5 className="text-xl font-bold text-gray-900">Tailwind Card</h5>
+                <p className="text-gray-700 mt-2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula.
                 </p>
-            </div>
-            <div className="p-6 pt-0">
-                <button
-                    ref={buttonRef}
-                    data-ripple-light="true"
-                    type="button"
-                    className="select-none rounded-lg bg-gradient-to-r from-slate-500 to-slate-600 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-slate-500/20 transition-all hover:shadow-lg hover:shadow-slate-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                >
-                    Read More
-                </button>
+                <div className="mt-4">
+                    <button
+                        ref={buttonRef}
+                        className="w-full py-2 bg-gradient-to-r from-slate-500 to-slate-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all"
+                    >
+                        Read More
+                    </button>
+                </div>
             </div>
         </div>
     );
 };
 
 export default Card;
-
