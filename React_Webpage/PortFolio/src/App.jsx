@@ -2,17 +2,19 @@ import React from "react";
 import Heading from "./Components/Heading";
 import FirstHero from "./Components/FirstHero";
 import QuickLinks from "./Components/QuickLinks";
-import Headingcopy from "./Components/Headingcopy";
+
 import SmoothScroll from "./Components/SmoothScroll";
+import UnamedSection from "./Components/UnamedSection";
 
 function App() {
   return (
     <div>
       <Heading />
-      {/* <Headingcopy/> */}
+
       <FirstHero />
       <QuickLinks />
       <SmoothScroll />
+      <UnamedSection />
     </div>
   )
 }

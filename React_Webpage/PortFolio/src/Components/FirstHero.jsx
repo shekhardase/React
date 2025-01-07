@@ -68,7 +68,7 @@ const FirstHero = () => {
             <img
               src="https://cdn.prod.website-files.com/5e87e737ee7085b9ba02c101/5e87e737ee7085c39c02c107_mac.svg"
               alt="Mac Illustration"
-              className="max-w-full h-auto"
+              className="w-full h-auto max-w-sm md:max-w-md lg:max-w-lg"
             />
           </div>
         </div>

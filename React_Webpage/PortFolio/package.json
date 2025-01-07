@@ -16,7 +16,8 @@
     "motion": "^11.15.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "resize-observer-polyfill": "^1.5.1"
+    "resize-observer-polyfill": "^1.5.1",
+    "styled-components": "^6.1.14"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

@@ -44,7 +44,7 @@ function QuickLinks() {
 
     return (
         <div
-            className="quicklinks mt-10 w-auto flex flex-col items-center font-nunito font-extrabold text-black text-xl"
+            className="quicklinks mt-10 w-auto flex flex-col items-center font-nunito font-extrabold text-black text-xl "
         >
             <h1 className="mb-5 text-3xl">Quick Links</h1>
 
@@ -52,43 +52,43 @@ function QuickLinks() {
                 {/* Left to Right */}
                 <div
                     ref={(el) => (leftBlocksRef.current[0] = el)}
-                    className="flex items-center justify-between px-4 py-2 bg-slate-400 hover:bg-slate-900 transition rounded-md shadow-md w-full md:w-auto"
+                    className="flex items-center justify-between px-4 py-2 bg-slate-400 hover:bg-slate-900 hover:text-white transition rounded-md shadow-md w-full md:w-auto group"
                 >
-                    <a href="#" className="text-black hover:text-white text-base md:text-lg">
+                    <a href="#" className="text-black group-hover:text-white text-base md:text-lg">
                         Blog
                     </a>
-                    <span className="ml-2 text-base md:text-lg hover:text-white">↗</span>
+                    <span className="ml-2 text-base md:text-lg group-hover:text-white">↗</span>
                 </div>
 
                 <div
                     ref={(el) => (leftBlocksRef.current[1] = el)}
-                    className="flex items-center justify-between px-4 py-2 bg-slate-400 hover:bg-slate-900 transition rounded-md shadow-md w-full md:w-auto"
+                    className="flex items-center justify-between px-4 py-2 bg-slate-400 hover:bg-slate-900 group-hover:text-white transition rounded-md shadow-md w-full md:w-auto group"
                 >
-                    <a href="#" className="text-black hover:text-white text-base md:text-lg">
+                    <a href="#" className="text-black group-hover:text-white text-base md:text-lg">
                         Projects
                     </a>
-                    <span className="ml-2 text-base md:text-lg hover:text-white">↗</span>
+                    <span className="ml-2 text-base md:text-lg group-hover:text-white">↗</span>
                 </div>
 
                 {/* Right to Left */}
                 <div
                     ref={(el) => (rightBlocksRef.current[0] = el)}
-                    className="flex items-center justify-between px-4 py-2 bg-slate-400 hover:bg-slate-900 transition rounded-md shadow-md w-full md:w-auto"
+                    className="flex items-center justify-between px-4 py-2 bg-slate-400 hover:bg-slate-900 group-hover:text-white transition rounded-md shadow-md w-full md:w-auto group"
                 >
-                    <a href="#" className="text-black hover:text-white text-base md:text-lg">
+                    <a href="#" className="text-black group-hover:text-white text-base md:text-lg">
                         About
                     </a>
-                    <span className="ml-2 text-base md:text-lg hover:text-white">↗</span>
+                    <span className="ml-2 text-base md:text-lg group-hover:text-white">↗</span>
                 </div>
 
                 <div
                     ref={(el) => (rightBlocksRef.current[1] = el)}
-                    className="flex items-center justify-between px-4 py-2 bg-slate-400 hover:bg-slate-900 transition rounded-md shadow-md w-full md:w-auto"
+                    className="flex items-center justify-between px-4 py-2 bg-slate-400 hover:bg-slate-900 group-hover:text-white transition rounded-md shadow-md w-full md:w-auto group"
                 >
-                    <a href="#" className="text-black hover:text-white text-base md:text-lg">
+                    <a href="#" className="text-black group-hover:text-white text-base md:text-lg">
                         Contact
                     </a>
-                    <span className="ml-2 text-base md:text-lg hover:text-white">↗</span>
+                    <span className="ml-2 text-base md:text-lg group-hover:text-white">↗</span>
                 </div>
             </div>
         </div>
@@ -96,3 +96,4 @@ function QuickLinks() {
 }
 
 export default QuickLinks;
+
