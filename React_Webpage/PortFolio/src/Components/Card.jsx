@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 
-const Card = () => {
+const Card = ({ title, description, buttonText, buttonLink, image }) => {
     const boxRef = useRef(null);
     const buttonRef = useRef(null);
 
@@ -59,19 +59,24 @@ const Card = () => {
             ref={boxRef}
             className="w-full max-w-sm bg-white rounded-lg shadow-lg transform transition-transform duration-300"
         >
-            <div className="h-40 bg-slate-500 rounded-t-lg"></div>
+            {/* Image Section */}
+            <div className="h-40 rounded-t-lg overflow-hidden">
+                <img src={image} alt={title} className="w-full h-full object-cover" />
+            </div>
+
+            {/* Text and Button Section */}
             <div className="p-6">
-                <h5 className="text-xl font-bold text-gray-900">Tailwind Card</h5>
-                <p className="text-gray-700 mt-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula.
-                </p>
+                <h5 className="text-xl font-bold text-gray-900">{title}</h5>
+                <p className="text-gray-700 mt-2">{description}</p>
                 <div className="mt-4">
-                    <button
-                        ref={buttonRef}
-                        className="w-full py-2 bg-gradient-to-r from-slate-500 to-slate-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all"
-                    >
-                        Read More
-                    </button>
+                    <a href={buttonLink} target="_blank" rel="noopener noreferrer">
+                        <button
+                            ref={buttonRef}
+                            className="w-full py-2 bg-gradient-to-r from-slate-500 to-slate-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all"
+                        >
+                            {buttonText}
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>

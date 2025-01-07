@@ -54,8 +54,8 @@ function QuickLinks() {
                     ref={(el) => (leftBlocksRef.current[0] = el)}
                     className="flex items-center justify-between px-4 py-2 bg-slate-400 hover:bg-slate-900 hover:text-white transition rounded-md shadow-md w-full md:w-auto group"
                 >
-                    <a href="#" className="text-black group-hover:text-white text-base md:text-lg">
-                        Blog
+                    <a href="https://leetcode.com/u/Shekhar_2004/" className="text-black group-hover:text-white text-base md:text-lg">
+                        LeetCode Profile
                     </a>
                     <span className="ml-2 text-base md:text-lg group-hover:text-white">↗</span>
                 </div>
@@ -64,8 +64,8 @@ function QuickLinks() {
                     ref={(el) => (leftBlocksRef.current[1] = el)}
                     className="flex items-center justify-between px-4 py-2 bg-slate-400 hover:bg-slate-900 group-hover:text-white transition rounded-md shadow-md w-full md:w-auto group"
                 >
-                    <a href="#" className="text-black group-hover:text-white text-base md:text-lg">
-                        Projects
+                    <a href="https://www.linkedin.com/in/shekhar2004/" className="text-black group-hover:text-white text-base md:text-lg">
+                        Linkdin
                     </a>
                     <span className="ml-2 text-base md:text-lg group-hover:text-white">↗</span>
                 </div>
@@ -75,8 +75,8 @@ function QuickLinks() {
                     ref={(el) => (rightBlocksRef.current[0] = el)}
                     className="flex items-center justify-between px-4 py-2 bg-slate-400 hover:bg-slate-900 group-hover:text-white transition rounded-md shadow-md w-full md:w-auto group"
                 >
-                    <a href="#" className="text-black group-hover:text-white text-base md:text-lg">
-                        About
+                    <a href="https://www.codechef.com/users/shekhardase" className="text-black group-hover:text-white text-base md:text-lg">
+                        CodeChef Profile
                     </a>
                     <span className="ml-2 text-base md:text-lg group-hover:text-white">↗</span>
                 </div>
@@ -85,7 +85,7 @@ function QuickLinks() {
                     ref={(el) => (rightBlocksRef.current[1] = el)}
                     className="flex items-center justify-between px-4 py-2 bg-slate-400 hover:bg-slate-900 group-hover:text-white transition rounded-md shadow-md w-full md:w-auto group"
                 >
-                    <a href="#" className="text-black group-hover:text-white text-base md:text-lg">
+                    <a href="mailto:shekhardase@gmail.com" className="text-black group-hover:text-white text-base md:text-lg">
                         Contact
                     </a>
                     <span className="ml-2 text-base md:text-lg group-hover:text-white">↗</span>

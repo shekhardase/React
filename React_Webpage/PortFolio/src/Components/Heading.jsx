@@ -1,5 +1,5 @@
 import React, { useRef, useLayoutEffect } from "react";
-import gsap from "gsap";
+import { gsap } from "gsap/all";
 
 const Heading = () => {
     const navbarRef = useRef(null);
@@ -48,11 +48,17 @@ const Heading = () => {
                 </a>
 
                 {/* Navigation Links */}
-                {["Projects", "Blog", "Learn", "Contact Me"].map((link, index) => (
+                {["Projects", "Achievments", "About", "Contact Me"].map((link, index) => (
                     <a
                         key={index}
                         href={`#${link.toLowerCase().replace(" ", "-")}`}
                         className="flex items-center justify-center w-40 h-16 hover:bg-slate-900 hover:text-white"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.querySelector(`#${link.toLowerCase().replace(" ", "-")}`).scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }}
                         onMouseOver={(e) => handleHover(e, true)}
                         onMouseOut={(e) => handleHover(e, false)}
                     >
@@ -65,3 +71,5 @@ const Heading = () => {
 };
 
 export default Heading;
+
+

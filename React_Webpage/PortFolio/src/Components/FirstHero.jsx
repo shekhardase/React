@@ -24,7 +24,7 @@ const FirstHero = () => {
 
   return (
     <div>
-      <div className="align mt-10 p-5" ref={imageRef}>
+      <div id="about" className="align mt-10 p-5" ref={imageRef}>
         <div className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto p-5 md:p-10">
           {/* Information Section */}
           <div
@@ -42,7 +42,7 @@ const FirstHero = () => {
               <button
                 className="cursor-pointer flex justify-between bg-gray-800 px-4 py-3 md:px-5 md:py-4 rounded-full text-white tracking-wider shadow-xl hover:bg-white hover:scale-105 duration-500 hover:ring-1 hover:text-black hover:ring-gray-800 ease-in-out font-nunito font-bold"
               >
-                Resume
+                <a href="https://drive.google.com/file/d/1Y-a4NBgzFI0SMd4TzQMue4bVxcrSkinf/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
