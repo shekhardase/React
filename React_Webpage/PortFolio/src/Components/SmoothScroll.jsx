@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Card from "./Card";
-
 gsap.registerPlugin(ScrollTrigger);
 
 const SmoothScroll = () => {
@@ -35,65 +34,66 @@ const SmoothScroll = () => {
             );
         }
     }, []);
+
+
     const cardData = [
         {
             title: "Smart Docs",
             description: "A simple frontend application to keep track of notes and tasks interactively.",
             buttonText: "Learn More",
             buttonLink: "https://github.com/shekhardase/Smart-Docs",
-            image: 'React_Webpage\PortFolio\src\assets\image1.png',
+            image: './src/assets/image1.png',
         },
         {
             title: "Animated Web Homepage",
             description: "A professional-level web homepage featuring GSAP animations for smooth and stunning visual effects.",
             buttonText: "View Details",
             buttonLink: "https://github.com/shekhardase/Presistent-Ventures",
-            image: "React_Webpage\PortFolio\src\assets\image2.png",
+            image: './src/assets/image2.png',
         },
         {
             title: "AI-Powered Phishing Defense",
             description: "A machine learning project to detect fake websites and enhance cybersecurity.",
             buttonText: "Explore",
             buttonLink: "https://github.com/shekhardase/AI-Powered-Phishing-Defense-Cutting-Edge-Machine-Learning-Solutions",
-            image: "React_Webpage\PortFolio\src\assets\image3.png",
+            image: './src/assets/image3.png',
         },
         {
             title: "React Tic-Tac-Toe",
             description: "A classic Tic-Tac-Toe game built using React with an interactive and responsive interface.",
             buttonText: "Check it Out",
             buttonLink: "https://github.com/shekhardase/React/tree/master/ReactPlaylist/tic-tac-toe",
-            image: "React_Webpage\PortFolio\src\assets\image4.png",
+            image: './src/assets/image4.png',
         },
         {
             title: "Dungeon Hunter RPG Game",
             description: "An immersive RPG game built with HTML, CSS, and JavaScript featuring interactive gameplay and classic dungeon themes.",
             buttonText: "Check it Out",
             buttonLink: "https://github.com/shekhardase/FreeCodeCamp-Practice-Project/tree/main/RPG%20game",
-            image: "React_Webpage\PortFolio\src\assets\image5.png",
+            image: './src/assets/image5.png',
         },
         {
             title: "Calorie Counter",
             description: "A user-friendly application to track daily calorie intake and maintain a healthy lifestyle.",
             buttonText: "Check it Out",
             buttonLink: "https://github.com/shekhardase/FreeCodeCamp-Practice-Project/tree/main/CalorieCounter",
-            image: "React_Webpage\PortFolio\src\assets\image6.png",
+            image: './src/assets/image6.png',
         },
         {
             title: "Snake Game (C++)",
             description: "A classic Snake game implemented in pure C++, running directly in the terminal for a nostalgic gaming experience.",
             buttonText: "Check it Out",
             buttonLink: "https://github.com/shekhardase/SnakeGame",
-            image: "https://github.com/shekhardase/React/blob/master/React_Webpage/PortFolio/src/assets/image7.png",
+            image: './src/assets/image7.png'
         },
         {
             title: "Boilerplate Manager",
             description: "A web application to manage and store reusable code snippets, boosting productivity for developers",
             buttonText: "Check it Out",
             buttonLink: "https://github.com/shekhardase/BoilerPlateManager",
-            image: "React_Webpage\PortFolio\src\assets\image8.png",
+            image: './src/assets/image8.png'
         },
     ];
-
 
     return (
         <div id="projects" className="w-full px-4 py-6 bg-gray-100">

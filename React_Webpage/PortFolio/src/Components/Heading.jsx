@@ -48,7 +48,7 @@ const Heading = () => {
                 </a>
 
                 {/* Navigation Links */}
-                {["Projects", "Achievments", "About", "Contact Me"].map((link, index) => (
+                {["Projects", "Achievments", "About", "ReadyToWork"].map((link, index) => (
                     <a
                         key={index}
                         href={`#${link.toLowerCase().replace(" ", "-")}`}
